@@ -1,0 +1,66 @@
+<h1>SUBMISSION RSVP</h1>
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #7CB8EE;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #7CB8EE;
+}
+</style>
+
+<table>
+	<tr>
+		<td><strong>NAME</strong></td>
+		<td><%= @name %></td>
+	</tr>
+	<tr>
+		<td><strong>EMAIL</strong></td>
+		<td><%= @email %></td>
+	</tr>
+	<tr>
+		<td><strong>ADDRESS</strong></td>
+		<td><%= @street %><br><%= @street2 %><br><%= @city %><br><%= @state %> <%= @zip %></td>
+	</tr>
+	<tr>
+		<td><strong>WHAT IS YOUR TOTAL PARTY COUNT</strong></td>
+		<td><%= @party_count %></td>
+	</tr>
+	<tr>
+		<td><strong>HOW MANY ARE CHILDREN IN YOUR PARTY?</strong></td>
+		<td><%= @children_count %></td>
+	</tr>	
+	<tr>
+		<td><strong>WILL YOU ATTEND?</strong></td>
+		<% if @will_attend %>
+			<td>Yes</td>
+		<% else %>
+			<td>No</td>
+		<% end %>
+	</tr>
+	<tr>
+		<td><strong>SONG REQUEST</strong></td>
+		<td><%= @song_request %></td>
+	</tr>
+	<tr>
+		<td><strong>MESSAGE</strong></td>
+		<td><%= @message %></td>
+	</tr>
+	<tr>
+		<td><strong>DO YOU HAVE A DIETARY RESTRICTION?</strong></td>
+		<td><%= @dietary_restriction %></td>
+	</tr>	
+	<tr>
+		<td><strong>WHAT IS YOUR EMAIL ADDRESS?</strong></td>
+		<td><%= @email %></td>
+	</tr>
+</table>

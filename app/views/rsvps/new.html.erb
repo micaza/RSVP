@@ -1,0 +1,50 @@
+
+
+<div class="page-header">
+	<h1>RSVP</h1>
+	<hr>
+    <br>
+</div>
+
+<%= bootstrap_form_for(@rsvp, label_errors: true) do |f| %>
+	<%= f.alert_message "You can only submit this form if you fix the errors below." %>
+	<br>
+	<div class="btn-group" data-toggle="buttons", style="width:100%; text-align: center;margin: 0 auto;">
+		<%= f.label 'Will you be able to attend?', style:"font-size: 18pt" %>
+		<%= f.form_group :will_attend do %>	
+			<div class="col-md-6">
+				<label id="yes" class="btn btn-primary active" style="padding-right: 50px; font-size: 14pt; width: 100%;">
+			 		<%= f.radio_button :will_attend, true, label: "Yes, I can't wait!".html_safe, checked: true, class:'no-select radio-custom' , style:"display: none;"%>
+			 	</label>
+			</div>
+			<div class="col-md-6">
+			 	<label id="no" class="btn btn-primary" style="padding-right: 50px; font-size: 14pt; width: 100%;">
+			  		<%= f.radio_button :will_attend, false, label: "No, I wish I could make it ".html_safe, class:'no-select radio-custom', style:"display: none;" %>
+			  	</label>
+			</div>
+		<% end %>
+		<br><br><br>
+	</div>
+	<%= f.text_field :name	%>
+	<%= f.label :email, class:'not-attending' %>
+	<%= f.email_field :email, hide_label: true, class:'not-attending' %>
+	<%= f.label 'Address', class:'not-attending' %>
+	<%= f.text_field :street, hide_label: true, class:'not-attending', placeholder: 'Street 1' %>
+	<%= f.text_field :street2, hide_label: true, class:'not-attending', placeholder: 'Street 2' %>
+	<div class="not-attending">
+		<%= f.select :state, options_for_select(us_states), hide_label: true, class:'not-attending', include_blank: 'Select your state' %>
+	</div>
+	<%= f.text_field :city, hide_label: true, class:'not-attending',  placeholder: 'City' %>
+	<%= f.text_field :zip, hide_label: true, class:'not-attending', maxlength: 5, placeholder: 'Zip' %>
+	<%= f.label :party_count, class:'not-attending' %>
+	<%= f.text_field :party_count,  hide_label: true, class:'not-attending' %>
+	<%= f.label :children_count, class:'not-attending' %>
+	<%= f.text_field :children_count,  hide_label: true, class:'not-attending' %>
+	<%= f.label :song_request, class:'not-attending' %>
+	<%= f.text_area :song_request,  hide_label: true, class:'not-attending' %>
+	<%= f.text_area :message %>
+	<%= f.label :dietary_restriction,  class:'not-attending' %>
+	<%= f.text_area :dietary_restriction,  hide_label: true, class:'not-attending' %>
+	<%= recaptcha_tags %>
+	<%= f.submit 'Submit', :data => {:confirm => 'Are you sure you want to submit?'}, class: 'btn btn-info btn-lg' %>
+<% end %>

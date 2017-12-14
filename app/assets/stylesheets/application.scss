@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "rails_bootstrap_forms";
+
+
+body {
+	background-color: white;
+	color: #2A0075;
+	font-family: "Varela Round", Arial, Helvetica;
+	font-size: 16pt;
+}
+.page-header > h1 {
+	text-align: center;
+	font-family: "Dancing Script", Arial, Helvetica;
+	font-size: 80px;
+
+}
+footer {
+	text-align: center;
+	font-family: "Dancing Script", Arial, Helvetica;
+
+
+}
+.pg-header, .pg-header > .container-fluid > h1 {
+	font-family: "Dancing Script", Arial, Helvetica;
+	font-size: 40pt; 
+	background-color: #7CB8EE;
+	color:  #F2F2F2; 
+	text-align: center;
+	width: 100%;
+	
+}
+
+.pg-header {
+	margin-bottom: 5px;
+	box-shadow: 0px 2px 2px #112B6F;
+}
+.jumbotron {
+	box-shadow: 10px 10px 5px #112B6F;
+	background-color: #F2F2F2;
+}
+.new_rsvp {
+	width: 80%;
+	margin: 0 auto;
+}
+hr {
+	display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid  #1C2E6C;
+    margin: 1em 0;
+    padding: 0; 
+}
+.page-header {
+	border-bottom: none;
+}
+.btn-primary.active {
+	background-color: #1C2E6C;
+}
+@media only screen and (max-width: 500px) {
+    .new_rsvp {
+		width: 100%;
+	}
+
+}

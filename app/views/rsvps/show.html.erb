@@ -1,0 +1,59 @@
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #7CB8EE;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #7CB8EE;
+}
+</style>
+<div class="page-header">
+	<% if @rsvp.will_attend %>
+		<h1>Thank you,<br>we look forward to seeing you!</h1>
+	<% else %>
+		<h1>Thank you,<br>we are sorry you cannot make it</h1>
+	<% end %>
+</div>
+<!-- <table>
+	<tr>
+		<td><strong>NAME</strong></td>
+		<td><%= @rsvp.name %></td>
+	</tr>
+	<tr>
+		<td><strong>WHAT IS YOUR TOTAL PARTY COUNT</strong></td>
+		<td><%= @rsvp.party_count %></td>
+	</tr>
+	<tr>
+		<td><strong>HOW MANY ARE CHILDREN IN YOUR PARTY?</strong></td>
+		<td><%= @rsvp.children_count %></td>
+	</tr>	
+	<tr>
+		<td><strong>WILL YOU ATTEND?</strong></td>
+		<% if @rsvp.will_attend %>
+			<td>Yes</td>
+		<% else %>
+			<td>No</td>
+		<% end %>
+	</tr>
+	<tr>
+		<td><strong>SONG REQUEST</strong></td>
+		<td><%= @rsvp.song_request %></td>
+	</tr>
+	<tr>
+		<td><strong>DO YOU HAVE A DIETARY RESTRICTION?</strong></td>
+		<td><%= @rsvp.dietary_restriction %></td>
+	</tr>	
+	<tr>
+		<td><strong>WHAT IS YOUR EMAIL ADDRESS?</strong></td>
+		<td><%= @rsvp.dietary_restriction %></td>
+	</tr>
+</table>
+ -->

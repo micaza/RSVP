@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  party_count: 1
+  children_count: 1
+  song_request: MyString
+  message: MyText
+  can_make_it: false
+  dietary_restriction: MyText
+
+two:
+  party_count: 1
+  children_count: 1
+  song_request: MyString
+  message: MyText
+  can_make_it: false
+  dietary_restriction: MyText
