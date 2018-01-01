@@ -70,9 +70,27 @@ hr {
 .btn-primary.active {
 	background-color: #1C2E6C;
 }
+.image {
+	width: 350px; 
+	margin:0 auto; 
+	box-shadow: 10px 10px 5px #C1C1C1;
+}
+.home-title {
+	width: 100%; 
+	text-align: center; 
+	border-bottom: 1px solid black;
+}
 @media only screen and (max-width: 500px) {
+	#home {
+
+	}
     .new_rsvp {
 		width: 100%;
 	}
-
+	.home-title > h1{
+		font-size: 20pt;
+	}
+	.image, .image > img {
+		width: 150px; 
+	}
 }
