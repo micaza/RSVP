@@ -1,0 +1,40 @@
+<div id='home'>
+	<div style="width: 100%; text-align: center; border-bottom: 1px solid black" >
+	<h1>Congratulations</h1>
+	</div>
+	<br>
+	<div style="width: 350px; margin:0 auto; box-shadow: 10px 10px 5px #C1C1C1;">
+		<%= image_tag 'marcoslizzy.jpg', alt: 'Picture of Marcos and Lizzy', class:'rounded mx-auto d-block' %>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="panel panel-info">
+				<div class="panel-heading">Important links</div>
+				<div class="panel-body">
+					<p><%= link_to 'RSVP', new_rsvp_path, class: 'btn btn-info', style:'width: 100%', popup: true, onclick: "window.open(this.href, '_blank', 'scrollbars=1,resizable=1,width=600,height=1000'); return false" %></p>
+					<p><%= link_to 'Amazon Registry', 'https://www.amazon.com/wedding/lizzy-rasmussen-marcos-icaza-riverton-january-2018/registry/2TL8XX40B2L56', class: 'btn btn-info', target: '_blank', style:'width: 100%' %></p>
+				</div>
+			</div>
+			<br>
+						
+		</div>
+		<div class="col-md-8">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Reception information</div>
+				<div class="panel-body">
+					<p><span style="font-size: 20pt;font-weight: bold;">Reception date:</span> Saturday, January 20, 2018</p>
+					<p><span style="font-size: 20pt;font-weight: bold;">Starts:</span> 7:00PM</p>
+					<p><span style="font-size: 20pt;font-weight: bold;">End:</span> 9:00PM</p>
+					<p><span style="font-size: 20pt;font-weight: bold;">Feature:</span></p>
+					<ul>
+					  <li>Hot chocolate bar</li>
+					  <li>Kids table</li>
+					  <li>Dancing</li>
+					  <li>Vegan friendly option available</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
