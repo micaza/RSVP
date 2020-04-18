@@ -11,7 +11,7 @@ before_action :set_rsvp, only: [:show, :edit, :update]
 
 	def create
 		@rsvp = Rsvp.new(rsvp_params) 
-		if @rsvp.save && verify_recaptcha(model: @rsvp)
+		if (@rsvp.save && Rails.env.production? && Riverify_recaptcha(model: @rsvp)) || (@rsvp.save)
 			redirect_to @rsvp
 			EmailMailer.notify(@rsvp.party_count, @rsvp.email, @rsvp.name, @rsvp.street, @rsvp.street2, @rsvp.city, @rsvp.zip, @rsvp.state, @rsvp.children_count, @rsvp.song_request, @rsvp.message, @rsvp.will_attend, @rsvp.dietary_restriction).deliver
 		else

@@ -13,6 +13,6 @@ class EmailMailer < ApplicationMailer
 		@message = message
 		@will_attend = will_attend
 		@dietary_restriction = dietary_restriction
-		mail to: 'marcosicaza@gmail.com;unicorn.sparkles4743@gmail.com', subject: 'SOMEONE HAS SUBMITTED A RSVP FORM'
+		mail to: 'test@testing.com', subject: 'SOMEONE HAS SUBMITTED A RSVP FORM'
 	end
 end
