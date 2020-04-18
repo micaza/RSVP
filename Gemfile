@@ -8,9 +8,8 @@ end
 gem 'bootstrap-sass', '~> 3.4.1'
 
 gem 'bootstrap_form'
-gem "actionview", ">= 5.2.4.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.2.4'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server

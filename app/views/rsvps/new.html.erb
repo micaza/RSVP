@@ -48,7 +48,9 @@
 	<%= f.text_area :message %>
 	<%= f.label :dietary_restriction,  class:'not-attending' %>
 	<%= f.text_area :dietary_restriction,  hide_label: true, class:'not-attending' %>
-	<%= recaptcha_tags %>
+    <% if Rails.env.production?  %>
+	    <%= recaptcha_tags %>
+    <% end %>
 	<%= f.submit 'Submit', :data => {:confirm => 'Are you sure you want to submit?'}, class: 'btn btn-info btn-lg' %>&nbsp;
 	<%= link_to 'Close', '#', onclick: 'window.close()',class:'btn btn-default btn-lg' %>
 <% end %>
